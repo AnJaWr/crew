@@ -1,0 +1,61 @@
+body {
+    background: grey;
+    font-family: 'Finlandica', sans-serif;
+
+
+}
+#header{
+    margin: 30px;
+    color: lightgray;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#main{
+    display: flex;
+}
+.name {
+    font-weight: bold;
+}
+
+#crew{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.member{
+    background-color: azure;
+    width: 40%;
+    height: 650px;
+    margin: 15px;
+    padding: 2%;
+    position: relative;
+}
+.list {
+    display: inline;
+}
+.active{
+    color: green;
+}
+.dead{
+    color: grey;
+}
+
+.disable{
+    display: none;
+}
+.portret{
+  
+        width: 130px;
+        height: 180px;
+        position: absolute;
+        right: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+.item{
+    display: flex;
+width: 80%;
+
+}
