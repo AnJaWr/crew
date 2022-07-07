@@ -15,7 +15,8 @@ const  member_container = document.getElementsByClassName("member");
 
 console.log(member_container)
   findMembers(crew);
-  // isActive(crew);
+ statistic(crew);
+//  sexCount(crew);
  }
 populate();
 
@@ -86,20 +87,72 @@ populate();
    $("#crew").children('div').addClass("member");
   
 
-  }}
-})
+ }}
 
-
-// let isActive = (obj) => { 
-//   const zaloga = obj['members'];
   
-//   for (const member of zaloga) {
-//  const z  = JSON.stringify(zaloga, function (key, value) {
-//   console.log
-//   if (member.status ==="aktywny") {
-//     console.log(member.status == "aktywny" )
-//     $(".status").addClass("active")
-//   } else {
-//     $(".status").addClass("dead")}
-//   })
-// }}
+ function statistic(obj) {
+  const crew = obj['members'];
+
+
+let women = crew.map(member => member.sex === "kobieta");
+let mutants = crew.map(member => member.mutacja != "");
+let kids = crew.map(member => member.wiek < 15);
+  console.log(kids)
+
+var sexQuantity = {};
+$.each(women, function(key, value) {
+  var numOccr = $.grep(women, function(elem) {
+    return elem === value;
+  }).length;
+  sexQuantity[value] = numOccr
+});
+
+  
+var mutantsQuantity = {};
+$.each(mutants, function(key, value) {
+  var numOccr = $.grep(mutants, function(elem) {
+    return elem === value;
+  }).length;
+  mutantsQuantity[value] = numOccr
+});
+
+  var kidsQuantity = {};
+$.each(kids, function(key, value) {
+  var numOccr = $.grep(kids, function(elem) {
+    return elem === value;
+  }).length;
+  kidsQuantity[value] = numOccr
+});
+
+
+let women_number = sexQuantity.true;
+let men_number = sexQuantity.false;
+let mutants_number = mutantsQuantity.true;
+let kids_number = kidsQuantity.true;
+const statistic = document.getElementById("statistic");
+  
+  
+ 
+ const count_crew = Object.keys(crew).length;
+  const statistic_container = document.createElement('div');
+  const lcrew = document.createElement('p');
+  const lwomen = document.createElement('p');
+  const lmen = document.createElement('p');
+  const lkids= document.createElement('p');
+  const lmutants = document.createElement('p');
+ 
+  lcrew.textContent = `Liczebność załogi: ` + count_crew;
+  lwomen.textContent = `Liczba kobiet: ` + women_number;
+  lmen.textContent = `Liczba mężczyzn: ` + men_number;
+  lkids.textContent = `Liczba dzieci: ` + kids_number;
+  lmutants.textContent = `Liczba osób z mutacjami: ` + mutants_number;
+
+
+  statistic.appendChild(statistic_container);
+  statistic_container.append(lcrew);
+  statistic_container.append(lwomen);
+  statistic_container.append(lmen);
+  statistic_container.append(lkids);
+  statistic_container.append(lmutants);
+};
+});
