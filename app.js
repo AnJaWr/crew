@@ -94,41 +94,26 @@ populate();
   const crew = obj['members'];
 
 
-let women = crew.map(member => member.sex === "kobieta");
-let mutants = crew.map(member => member.mutacja != "");
-let kids = crew.map(member => member.wiek < 15);
-  console.log(kids)
-
-var sexQuantity = {};
-$.each(women, function(key, value) {
-  var numOccr = $.grep(women, function(elem) {
-    return elem === value;
-  }).length;
-  sexQuantity[value] = numOccr
-});
-
-  
-var mutantsQuantity = {};
-$.each(mutants, function(key, value) {
-  var numOccr = $.grep(mutants, function(elem) {
-    return elem === value;
-  }).length;
-  mutantsQuantity[value] = numOccr
-});
-
-  var kidsQuantity = {};
-$.each(kids, function(key, value) {
-  var numOccr = $.grep(kids, function(elem) {
-    return elem === value;
-  }).length;
-  kidsQuantity[value] = numOccr
-});
+  const women = crew.filter(member => member.sex  === "kobieta");
+  const men = crew.filter(member => member.sex  === "mężczyzna");
+  const mutant = crew.filter(member => member.mutacja  !== "");
+  let kids = crew.filter(member => member.wiek < 15);
 
 
-let women_number = sexQuantity.true;
-let men_number = sexQuantity.false;
-let mutants_number = mutantsQuantity.true;
-let kids_number = kidsQuantity.true;
+//   var kidsQuantity = {};
+// $.each(kids, function(key, value) {
+//   var numOccr = $.grep(kids, function(elem) {
+//     return elem === value;
+//   }).length;
+//   kidsQuantity[value] = numOccr
+// });
+
+
+
+let women_number = women.length;
+let men_number = men.length;
+let mutants_number = mutant.length;
+let kids_number = kids.length;
 const statistic = document.getElementById("statistic");
   
   
