@@ -15,7 +15,7 @@ const  member_container = document.getElementsByClassName("member");
 
 console.log(member_container)
   findMembers(crew);
-  isActive(crew);
+  // isActive(crew);
  }
 populate();
 
@@ -60,7 +60,7 @@ populate();
     mMutacja.textContent = `Mutacja: ${member.mutacja}`;
     mStatus.textContent = `Status: ${member.status}`;
     mOpis.textContent = `Opis: ${member.opis}`;
-    mStatus.setAttribute("class", "status")
+    mStatus.setAttribute("class", member.status === "aktywny" ? "status active" : "status dead");
     mPortret.setAttribute("class", "portret");
     mPortret.setAttribute("style", "background-image:url(" + member.portret + ")")
 
@@ -90,16 +90,16 @@ populate();
 })
 
 
-let isActive = (obj) => { 
-  const zaloga = obj['members'];
+// let isActive = (obj) => { 
+//   const zaloga = obj['members'];
   
-  for (const member of zaloga) {
- const z  = JSON.stringify(zaloga, function (key, value) {
-  console.log
-  if (member.status ==="aktywny") {
-    console.log(member.status == "aktywny" )
-    $(".status").addClass("active")
-  } else {
-    $(".status").addClass("dead")}
-  })
-}}
+//   for (const member of zaloga) {
+//  const z  = JSON.stringify(zaloga, function (key, value) {
+//   console.log
+//   if (member.status ==="aktywny") {
+//     console.log(member.status == "aktywny" )
+//     $(".status").addClass("active")
+//   } else {
+//     $(".status").addClass("dead")}
+//   })
+// }}
