@@ -3,24 +3,21 @@ $(document).ready(function(){
 
 
 const  member_container = document.getElementsByClassName("member");
+// ==========================getting data from json ===============
 
- async function populate() {
-
-  const requestURL = 'zaloga.json';
-  const request = new Request(requestURL);
-
-  const response = await fetch(request);
-  const crew = await response.json();
-
-
-console.log(member_container)
-  findMembers(crew);
- statistic(crew);
-//  sexCount(crew);
+async function populate() {
+const requestURL = 'zaloga.json';
+const request = new Request(requestURL);
+const response = await fetch(request);
+const crew = await response.json();
+findMembers(crew);
+statistic(crew);
  }
 populate();
+ 
+// ==========================creating container ===============
 
- function findMembers(obj) {
+function findMembers(obj) {
  
   const crewMember = obj['members'];
   const mainContainer = document.getElementById("crew");
@@ -86,14 +83,11 @@ populate();
  
    $("#crew").children('div').addClass("member");
   
-
  }}
 
-  
+  // ========================== creating ststistic box===============
  function statistic(obj) {
   const crew = obj['members'];
-
-
   const women = crew.filter(member => member.sex  === "kobieta");
   const men = crew.filter(member => member.sex  === "mężczyzna");
   const mutant = crew.filter(member => member.mutacja  !== "");
@@ -126,11 +120,11 @@ const statistic = document.getElementById("statistic");
   const lkids= document.createElement('p');
   const lmutants = document.createElement('p');
  
-  lcrew.textContent = `Liczebność załogi: ` + count_crew;
-  lwomen.textContent = `Liczba kobiet: ` + women_number;
-  lmen.textContent = `Liczba mężczyzn: ` + men_number;
-  lkids.textContent = `Liczba dzieci: ` + kids_number;
-  lmutants.textContent = `Liczba osób z mutacjami: ` + mutants_number;
+  lcrew.textContent = `Liczebność załogi: ` + count_crew + ' || ';
+  lwomen.textContent = `Liczba kobiet: ` + women_number + ' || ';
+  lmen.textContent = `Liczba mężczyzn: ` + men_number + ' || ';
+  lkids.textContent = `Liczba dzieci: ` + kids_number + ' || ';
+  lmutants.textContent = `Liczba osób z mutacjami: ` + mutants_number ;
 
 
   statistic.appendChild(statistic_container);
@@ -140,21 +134,20 @@ const statistic = document.getElementById("statistic");
   statistic_container.append(lkids);
   statistic_container.append(lmutants);
 
-// ============================================== button ===========================================
+// ============================================== nav button handle ===========================================
 
 const nav_button = document.createElement("button");
-nav_button.textContent = "Przeszukaj akta"
+nav_button.textContent = "Wróć"
+document.querySelector('header').append(nav_button);
 
-statistic_container.append(nav_button);
 function setAttributes(el, attrs) {
   for(var key in attrs) {
     el.setAttribute(key, attrs[key]);
-  }
-  console.log("Działa")
-}
+  }}
 setAttributes(nav_button, {"type": "button", "class": "nav_button"});
+setAttributes(statistic_container, {"class": "akta"})
 
-nav_button.onclick = function () {location.href = "akta.html";};
+nav_button.onclick = function () {location.href = "index.html";};
 
 
 
