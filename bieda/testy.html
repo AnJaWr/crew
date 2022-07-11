@@ -17,37 +17,43 @@
     <!--================================================================ Sekcja formularzy===================================== -->
     <section id="section_form">
        
-       <form style="margin-top:20px;" id=""></form> 
-    <!-- imie i nazwisko --> 
-    <div class="form_item">
+       
+    <!-- imie i nazwisko --> <div class="form_item">
+    <form style="margin-top:20px;">
       <h2> Imię i nazwisko </h2>
 <label for="fname">Imię lub nazwisko:</label><br>
   <input type="text" id="fname" name="fname"><br>
   <input type="submit" value="Submit">
   <div class="test"></div>
-    </div>
+    </form></div>
 
     <!-- płeć -->
     <div class="form_item">
-
+    <form action="">
     <h2>Płeć </h2>
  
-<input type="checkbox" id="sex_k" name="sex" value="kobieta" class="one" >
+<input type="radio" id="sex_k" name="sex" value="k">
 <label for="sex_k">Kobieta</label><br>
-<input type="checkbox" id="sex_m" name="sex" value="mężczyzna"class="one" >
+<input type="radio" id="sex_m" name="sex" value="m">
 <label for="sex_m">Mężczyzna</label><br>
-<!-- </form> -->
+<input type="radio" id="sex_a" name="sex" value="a">
+<label for="sex_a">Wszyscy</label><br>
+<!-- 
+<input id="input_sex" type="button" value="Submit"> -->
+</form>
     </div>
 
 
       <!-- Stan cywilny -->
   <div class="form_item">
-    <!-- <form action=""> -->
+    <form action="">
       <h2>Stan cywilny</h2>
-      <input type="checkbox" id="singiel" name="stan_cywilny" value="singiel" class="one" >
+      <input type="radio" id="singiel" name="stan_cywilny" value="singiel">
       <label for="singiel">Singiel</label><br>
-      <input type="checkbox" id="W związku" name="stan_cywilny" value="w_zwiazku" class="one">
+      <input type="radio" id="W związku" name="stan_cywilny" value="w_zwiazku">
       <label for="W związku">W związku</label><br>
+      <input type="radio" id="W związku" name="stan_cywilny" value="obojetne">
+      <label for="W związku">Obojętne</label><br>
     </form>
     
     </div>
@@ -80,21 +86,21 @@
   <form action="">
     <h2>Wachta/zmiana</h2>
     
-    <input type="checkbox" id="zpierwsza" name="zmiana" value="zpierwsza">
+    <input type="radio" id="zpierwsza" name="zmiana" value="zpierwsza">
     
     <label for="zpierwsza">Pierwsza</label><br>
     
-    <input type="checkbox" id="zdruga" name="zmiana" value="zdruga">
+    <input type="radio" id="zdruga" name="zmiana" value="zdruga">
     <label for="zdruga">Druga</label><br>
-    <input type="checkbox" id="ztrzecia" name="zmiana" value="ztrzecia">
+    <input type="radio" id="ztrzecia" name="zmiana" value="ztrzecia">
     <label for="ztrzecia">Trzecia</label><br>
-    <input type="checkbox" id="ndt" name="zmiana" value="ndt">
+    <input type="radio" id="ndt" name="zmiana" value="ndt">
     <label for="ndt">Nie dotyczy</label><br>
-    <input type="submit" value="Submit"> -
-</form></div> -
+    <input type="submit" value="Submit">
+</form></div>
 
   <!-- Języki -->
-<div class="form_item">
+  <div class="form_item">
   <form action="">
   <h2>Osoby mówiące językami:</h2>
   <input type="checkbox" id="angielski" name="angielski" value="angielski">
@@ -106,8 +112,7 @@
   <input type="checkbox" id="inne" name="inne" value="inne">
   <label for="inne"> Inne</label><br>
   <input type="submit" value="Submit">
-</form></div> 
-
+</form></div>
   <!-- Stopień -->
   <div class="form_item">
   <h2>Stopień:</h2>
@@ -159,7 +164,6 @@
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="zaloga.js"></script> 
     <script src="search.js"></script> 
 </body>
 </html>

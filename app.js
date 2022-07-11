@@ -98,7 +98,7 @@ populate();
   const men = crew.filter(member => member.sex  === "mężczyzna");
   const mutant = crew.filter(member => member.mutacja  !== "");
   const kids = crew.filter(member => member.wiek < 15);
-
+  const count_crew = crew.filter(member => member.status === "aktywny");
 
 //   var kidsQuantity = {};
 // $.each(kids, function(key, value) {
@@ -114,11 +114,15 @@ let women_number = women.length;
 let men_number = men.length;
 let mutants_number = mutant.length;
 let kids_number = kids.length;
+
+let crew_number = count_crew.length;
 const statistic = document.getElementById("statistic");
   
   
  
-  const count_crew = Object.keys(crew).length;
+  // const count_crew = Object.keys(crew).length;
+  
+  
   const statistic_container = document.createElement('div');
   const lcrew = document.createElement('p');
   const lwomen = document.createElement('p');
@@ -126,7 +130,7 @@ const statistic = document.getElementById("statistic");
   const lkids= document.createElement('p');
   const lmutants = document.createElement('p');
  
-  lcrew.textContent = `Liczebność załogi: ` + count_crew;
+  lcrew.textContent = `Liczebność załogi (aktywni członkowie): ` + crew_number;
   lwomen.textContent = `Liczba kobiet: ` + women_number;
   lmen.textContent = `Liczba mężczyzn: ` + men_number;
   lkids.textContent = `Liczba dzieci: ` + kids_number;
@@ -146,6 +150,7 @@ const nav_button = document.createElement("button");
 nav_button.textContent = "Przeszukaj akta"
 
 statistic_container.append(nav_button);
+
 function setAttributes(el, attrs) {
   for(var key in attrs) {
     el.setAttribute(key, attrs[key]);

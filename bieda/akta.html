@@ -17,46 +17,33 @@
     <!--================================================================ Sekcja formularzy===================================== -->
     <section id="section_form">
        
-       <form style="margin-top:20px;" id=""></form> 
-    <!-- imie i nazwisko --> 
-    <div class="form_item">
-      <h2> Imię i nazwisko </h2>
+       
+    <!-- imie i nazwisko --> <div class="form_item">
+    <form style="margin-top:20px;">
 <label for="fname">Imię lub nazwisko:</label><br>
   <input type="text" id="fname" name="fname"><br>
   <input type="submit" value="Submit">
   <div class="test"></div>
-    </div>
+    </form></div>
 
     <!-- płeć -->
     <div class="form_item">
-
+    <form action="">
     <h2>Płeć </h2>
  
-<input type="checkbox" id="sex_k" name="sex" value="kobieta" class="one" >
+<input type="radio" id="sex_k" name="sex" value="kobieta" checked>
 <label for="sex_k">Kobieta</label><br>
-<input type="checkbox" id="sex_m" name="sex" value="mężczyzna"class="one" >
+<input type="radio" id="sex_m" name="sex" value="mężczyzna">
 <label for="sex_m">Mężczyzna</label><br>
-<!-- </form> -->
+<!-- <input type="radio" id="sex_a" name="sex" value="wszyscy">
+<label for="sex_a">Wszyscy</label><br> -->
+
+<input id="input_sex" type="button" value="Submit">
+</form>
     </div>
-
-
-      <!-- Stan cywilny -->
-  <div class="form_item">
-    <!-- <form action=""> -->
-      <h2>Stan cywilny</h2>
-      <input type="checkbox" id="singiel" name="stan_cywilny" value="singiel" class="one" >
-      <label for="singiel">Singiel</label><br>
-      <input type="checkbox" id="W związku" name="stan_cywilny" value="w_zwiazku" class="one">
-      <label for="W związku">W związku</label><br>
-    </form>
-    
-    </div>
-
-
     <!------Pochodzenie -->
-    <div class="form_item">
-   <form action="">
-        <h2>Pochodzenie</h2> 
+     <h2>Pochodzenie</h2><form action="">
+       
         <label for="pochodzenie">Pochodzenie:</label>
         <select id="pochodzenie" name="stopien">
           <option value="kapitan">Ludzie kapitana</option>
@@ -71,30 +58,46 @@
 
         </select>
         </form>
+
+  <!-- Stan cywilny -->
+  <div class="form_item">
+<form action="">
+  <h2>Stan cywilny</h2>
+  
+<input type="radio" id="zamezna" name="stan_cywilny" value="zamężna">
+<label for="zamezna">Kobieta zamężna</label><br> 
+  <input type="radio" id="panna" name="stan_cywilny" value="panna">
+   <label for="panna">Panna</label><br>
+  <input type="radio" id="zonaty" name="stan_cywilny" value="żonaty">
+  <label for="zonaty">Mężczyzna żonaty</label><br>
+  <input type="radio" id="kawaler" name="stan_cywilny" value="kawaler">
+  <label for="kawaler">Kawaler</label><br>
+  <input type="radio" id="wdowiec" name="stan_cywilny" value="wdowiec">
+  <label for="wdowiec">Wdowa/wdowiec</label><br>
+  <input type="submit" value="Submit">
+</form>
+
 </div>
 
 
-
-  <!-- Wachta/ zmiana --> 
-  <div class="form_item">
+  <!-- Wachta/ zmiana --> <div class="form_item">
   <form action="">
     <h2>Wachta/zmiana</h2>
     
-    <input type="checkbox" id="zpierwsza" name="zmiana" value="zpierwsza">
+    <input type="radio" id="zpierwsza" name="zmiana" value="zpierwsza">
     
     <label for="zpierwsza">Pierwsza</label><br>
     
-    <input type="checkbox" id="zdruga" name="zmiana" value="zdruga">
+    <input type="radio" id="zdruga" name="zmiana" value="zdruga">
     <label for="zdruga">Druga</label><br>
-    <input type="checkbox" id="ztrzecia" name="zmiana" value="ztrzecia">
+    <input type="radio" id="ztrzecia" name="zmiana" value="ztrzecia">
     <label for="ztrzecia">Trzecia</label><br>
-    <input type="checkbox" id="ndt" name="zmiana" value="ndt">
+    <input type="radio" id="ndt" name="zmiana" value="ndt">
     <label for="ndt">Nie dotyczy</label><br>
-    <input type="submit" value="Submit"> -
-</form></div> -
-
+    <input type="submit" value="Submit">
+</form></div>
   <!-- Języki -->
-<div class="form_item">
+  <div class="form_item">
   <form action="">
   <h2>Osoby mówiące językami:</h2>
   <input type="checkbox" id="angielski" name="angielski" value="angielski">
@@ -106,8 +109,7 @@
   <input type="checkbox" id="inne" name="inne" value="inne">
   <label for="inne"> Inne</label><br>
   <input type="submit" value="Submit">
-</form></div> 
-
+</form></div>
   <!-- Stopień -->
   <div class="form_item">
   <h2>Stopień:</h2>
@@ -127,12 +129,12 @@
   <option value="kadet">Kadet</option>
 </select>
 <input type="submit" value="Submit">
-</form></div>
-
+</form>
+<!-- </div> -->
 
 <!-- Mutacja -->
 
-<div class="form_item">
+<!-- <div class="form_item"> -->
 <h2>Mutacje:</h2>
 <form action="">
 <label for="mutacja">Mutacja:</label>
@@ -159,7 +161,6 @@
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="zaloga.js"></script> 
     <script src="search.js"></script> 
 </body>
 </html>
