@@ -147,3 +147,239 @@ const mainContainer = document.getElementById("crew");
 
   
   
+//śmieci
+
+
+
+// if (radio[0].checked && !radio[1].checked){ wybrana_płeć="kobieta"}
+// if (radio[1].checked && !radio[0].checked) {wybrana_płeć="mężczyzna"}
+// if (radio[2].checked && !radio[1].checked){ wybrany_stan="singiel"}
+// if (radio[3].checked && !radio[0].checked) {wybrany_stan="związek"}
+// if (radio[2].checked && radio[3].checked) (wybrany_stan=`"singiel" || "związek"`) 
+
+
+// if (radio[0].checked) {
+//   wybrani = members.filter(member => member.sex === wybrana_płeć)
+// }
+// if (radio[1].checked) {
+//   wybrani = members.filter(member => member.sex === wybrana_płeć)
+
+
+// if (radio[1].checked && radio[0].checked  || !radio[1].checked && !radio[0].checked ) {
+//   wybrani = members
+// }
+//   if (radio[2].checked) {
+//   wybrani = wybrani.filter(member => member.stan_cywilny === wybrany_stan)
+// }
+//  if (radio[3].checked) {
+//   wybrani = wybrani.filter(member => member.stan_cywilny === wybrany_stan)
+// }
+  // console.log(radio_checked);
+  // console.log("wybór płci" + wybor_plci)
+
+// function setAttributes(el, attrs) {
+//   for(var key in attrs) {
+//     el.setAttribute(key, attrs[key]);
+//   }
+// }
+
+
+
+    
+    // if (radio[0].checked)  {radio_checked.fill(radio[0].value, 0,1,2)}else{radio_checked.fill("",0,1,2)}
+    // if (radio[1].checked)  {radio_checked.fill(radio[1].value, 1,2,3)}else{radio_checked.fill("",1,2,3)}
+    // if (!radio[0].checked && !radio[1].checked ){radio_checked.splice(0, 2, "kobieta", "mężczyzna")}
+    // if (radio[2].checked ) {radio_checked.fill(radio[2].value, 2,3,4)}else{radio_checked.fill("",2,3,4)}
+    // if (radio[3].checked ) {   radio_checked.fill(radio[3].value, 3,4,5)}else{radio_checked.fill("",3,4,5)}
+    // if (!radio[2].checked && !radio[3].checked ){radio_checked.splice(2, 3, "singiel", "w_związku")};
+  //   (radio[1].checked){$(mezczyzna_p).each(
+  //     function() {
+  //       $(".mężczyzna").parent().show();
+  //     })}else{$(".mężczyzna").parent().hide();}
+
+  // if (radio[2].checked){$(singiel_p).each(
+  //     function() {
+  //         $(".singiel").parent().show();
+  //       })}else{$(".singiel").parent().hide();}
+  
+  //   if (radio[3].checked){$(w_zwiazku_p).each(
+  //     function() {
+  //       $(".w_zwiazku").parent().show();
+  //       })}else{$(".w_zwiazku").parent().hide();}
+
+  
+
+  //  if (radio[2].checked ) {radio_checked.fill(radio[2].value, 2,3,4)}else{radio_checked.fill("",2,3,4)}
+  //  if (radio[3].checked ) {   radio_checked.fill(radio[3].value, 3,4,5)}else{radio_checked.fill("",3,4,5)}}
+
+    //  if (radio[1].checked)  {radio_checked.fill(radio[1].value, 1,2,3)}else{radio_checked.fill("",1,2,3)}
+    //  if (radio[2].checked ) {radio_checked.fill(radio[2].value, 2,3,4)}else{radio_checked.fill("",2,3,4)}
+    //  if (radio[3].checked ) {   radio_checked.fill(radio[3].value, 3,4,5)}else{radio_checked.fill("",3,4,5)}}
+
+      // console.log(checkbox_input.checked + checkbox_input)
+        // input_value = "." + radio_checked.toString() + " ";
+        // console.log("radio checked " + radio_checked.filter(function(e){return e}))
+        // console.log("pokaz" + input_value)
+    //  $(input_value).parent().toggle();}
+    //  radio_checked=["a","b"];
+    //  $(".member").hide();
+    //  }
+    //  .filter(function(e){return e})
+
+// if (radio_checked[0] === "kobieta" ) {$("p.kobieta").parent().show()}
+// // else{ $("p.kobieta").parent().hide()}  
+// else if (radio_checked[0] !== "kobieta" ){ $("p.kobieta").parent().hide()} 
+// else if (radio_checked[1] === "mężczyzna" ){ $("p.mężczyzna").parent().show()} 
+// else if (radio_checked[1] !== "mężczyzna" ){ $("p.mężczyzna").parent().hide()} 
+// // else{ $("p.mężczyzna").parent().hide()} 
+// else if (radio_checked[2]  === "singiel" ){ $("p.singiel").parent().show() }
+// else if (radio_checked[2]  !== "singiel" ){ $("p.singiel").parent().hide() }
+// // else{ $("p.singiel").parent().hide() }
+// else if (radio_checked[3] === "w_zwiazku" ){ $("p.w_zwiazku").parent().show()} 
+// else if (radio_checked[3] !== "w_zwiazku" ){ $("p.w_zwiazku").parent().hide()} 
+// else{ $("p.w_zwiazku").parent().hide()}
+//     var a;
+//  for (a = 0; a < members_div.length; a++){
+// if(){}
+//  }
+
+
+// }  
+  
+     // let members_div= document.querySelectorAll('[class="member"]') ;
+    // let members_p= document.querySelectorAll('div[class="member"]>p') ;
+//     let kobieta_p = document.querySelectorAll('p[class="kobieta"]') ;
+//     let mezczyzna_p = document.querySelectorAll('p[class="mężczyzna"]') ;
+//     let singiel_p =document.querySelectorAll('p[class="singiel"]') ;
+// let w_zwiazku_p = document.querySelectorAll('p[class="w_zwiazku"]') ;
+
+//  console.log(checkbox_input);
+
+    
+
+
+//  for (i = 0; i < radio.length; i++) {
+//      if (radio[0].checked)  {
+//      radio_checked.fill(radio[0].value, 0,1,2);
+//    }else{radio_checked.fill("",0,1,2)}
+
+// let women_checked = radio[0].checked;
+// let men_checked = radio[1].checked;
+// let singiel_checked  = radio[2].checked;
+// let w_zwiazku_checked = radio[3].checked;
+
+// if (this.value === "singiel"){
+// $(".w_zwiazku").parent().hide();
+// $(".singiel").parent().show();
+// }
+// else if (this.value === "w_zwiazku"){
+//   $(".singiel").parent().hide();
+//   $(".w_zwiazku").parent().show();
+// }else if (this.value === "obojetne"){
+//   $(".singiel").parent().show();
+//   $(".w_zwiazku").parent().show();
+// }
+// }
+    
+
+// let input_value = "";
+// // Związki
+// // let checkboxs = document.querySelectorAll('input[type="radio"][name="sex"]')
+
+//   let checkbox_input = document.querySelectorAll('input[type="radio"].one')  
+//   let radio_checked=[];
+// function radioHandle(e){
+//   // let checkbox_input = document.querySelectorAll('input[type="radio"].one')  
+//   // var checkbox_input = document.forms[0];
+//  console.log(checkbox_input);
+// $(".member").hide();
+// var i;
+//  for (i = 0; i < checkbox_input.length; i++) {
+//      if (checkbox_input[i].checked) {
+//      radio_checked.push(checkbox_input[i].value)
+    
+//       // console.log(checkbox_input.checked + checkbox_input)
+//         input_value = input_value + checkbox_input[i].value + " ";
+//         console.log("pokaz" + input_value)
+//      $(`.`+input_value).parent().show();}
+//      input_value=""
+  
+
+// // }  
+
+// $(kobieta_p).each(
+//   function() {
+//     $(".kobieta").parent().show();
+//     {$(".mężczyzna").parent().hide();}
+//   })}
+//   else if (women_checked && men_checked){$(members_div).show();}
+//   else if (men_checked && !women_checked){$(kobieta_p).each(function() {
+//       $(".mężczyzna").parent().show();
+//       $(".kobieta").parent().hide();})}
+  
+ 
+// if (singiel_checked && !w_zwiazku_checked){$(singiel_p).each(
+//    function() {
+//    $(".singiel").parent().show();
+//      {$(".w_zwiazku").parent().hide();}
+//   }
+// )}
+// else if (singiel_checked && w_zwiazku_checked && women_checked && men_checked){$(members_div).show();}
+
+// else if(w_zwiazku_checked && !singiel_checked){$(w_zwiazku_p).each(function() {
+//   $(".mężczyzna").parent().show();
+//   $(".kobieta").parent().hide();}
+  
+
+// $(".member").hide() 
+    // var i;
+    // for (i = 0; i < radio.length; i++)
+// let radio_checked=["","","",""].join('').split('');
+// let women_checked = radio[0].checked;
+// let men_checked = radio[1].checked;
+// let singiel_checked  = radio[2].checked;
+// let w_zwiazku_checked = radio[3].checked;
+
+    // if (radio[0].checked)  {radio_checked.fill(radio[0].value, 0,1,2)}else{radio_checked.fill("",0,1,2)}
+    // if (radio[1].checked)  {radio_checked.fill(radio[1].value, 1,2,3)}else{radio_checked.fill("",1,2,3)}
+    // if (!radio[0].checked && !radio[1].checked ){radio_checked.splice(0, 2, "kobieta", "mężczyzna")}
+    // if (radio[2].checked ) {radio_checked.fill(radio[2].value, 2,3,4)}else{radio_checked.fill("",2,3,4)}
+    // if (radio[3].checked ) {   radio_checked.fill(radio[3].value, 3,4,5)}else{radio_checked.fill("",3,4,5)}
+    // if (!radio[2].checked && !radio[3].checked ){radio_checked.splice(2, 3, "singiel", "w_związku")};
+
+    
+    // if (radio[0].checked)  {radio_checked.fill(radio[0].value, 0,1,2)}else{radio_checked.fill("",0,1,2)}
+    // if (radio[1].checked)  {radio_checked.fill(radio[1].value, 1,2,3)}else{radio_checked.fill("",1,2,3)}
+    // if (!radio[0].checked && !radio[1].checked ){radio_checked.splice(0, 2, "kobieta", "mężczyzna")}
+    // if (radio[2].checked ) {radio_checked.fill(radio[2].value, 2,3,4)}else{radio_checked.fill("",2,3,4)}
+    // if (radio[3].checked ) {   radio_checked.fill(radio[3].value, 3,4,5)}else{radio_checked.fill("",3,4,5)}
+    // if (!radio[2].checked && !radio[3].checked ){radio_checked.splice(2, 3, "singiel", "w_związku")};
+
+
+  //   if (radio[0].checked)  {wybor_plci = radio[0].value}
+  //  else if (radio[1].checked)  {wybor_plci = radio[1].value}
+  //   if (radio[2].checked ) {wybor_stanu = radio[2].value}
+  //  else if (radio[3].checked ) {wybor_stanu = radio[2].value}
+
+    // console.log(radio_checked);
+    // console.log("wybór płci" + wybor_plci)
+
+// if (radio_checked[0] !== "" || radio_checked[1] !==""){
+//   wybrani = members.filter(member => member.sex === wybor_plci )  
+//  } else if (radio_checked[2] !== "" || radio_checked[3] !==""){
+//   wybrani = members.filter(member => member.stan_cywilny === wybor_stanu) 
+//  }
+
+       // if (checkbox[1].checked)  {checkbox_checked.fill(checkbox[1].value, 1,2,3)}else{checkbox_checked.fill("",1,2,3)}
+       // if (!checkbox[0].checked && !checkbox[1].checked ){checkbox_checked.splice(0, 2, "kobieta", "mężczyzna")}
+       // if (checkbox[2].checked ) {checkbox_checked.fill(checkbox[2].value, 2,3,4)}else{checkbox_checked.fill("",2,3,4)}
+       // if (checkbox[3].checked ) {   checkbox_checked.fill(checkbox[3].value, 3,4,5)}else{checkbox_checked.fill("",3,4,5)}
+       // if (!checkbox[2].checked && !checkbox[3].checked ){checkbox_checked.splice(2, 3, "singiel", "w_związku")};
+   // console.log(wybrana_płeć)
+
+          // if (checkbox[1].checked)  {checkbox_checked.fill(checkbox[1].value, 1,2,3)}else{checkbox_checked.fill("",1,2,3)}
+       // if (!checkbox[0].checked && !checkbox[1].checked ){checkbox_checked.splice(0, 2, "kobieta", "mężczyzna")}
+       // if (checkbox[2].checked ) {checkbox_checked.fill(checkbox[2].value, 2,3,4)}else{checkbox_checked.fill("",2,3,4)}
+       // if (checkbox[3].checked ) {   checkbox_checked.fill(checkbox[3].value, 3,4,5)}else{checkbox_checked.fill("",3,4,5)}
+       // if (!checkbox[2].checked && !checkbox[3].checked ){checkbox_checked.splice(2, 3, "singiel", "w_związku")};
+   // console.log(wybrana_płeć)

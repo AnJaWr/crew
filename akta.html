@@ -1,165 +1,170 @@
-<!DOCTYPE html>
+
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="akta.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet">
-    <title>Przeszukaj akta</title>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="akta.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet">
+      <title>Przeszukaj akta</title>
+     
+  <body>
+      <header><h1>ZAŁOGA STATKU - akta personalne <h1></h1></header> 
+      <section id="statistic"></section>
+  
+      <!--================================================================ Sekcja formularzy===================================== -->
+      <section id="section_form">
+         
+         <form style="margin-top:20px;" id=""></form> 
+      <!-- imie i nazwisko --> 
+  <!--     <div class="form_item">
+        <h2> Imię i nazwisko </h2>
+  <label for="fname">Imię lub nazwisko:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <input type="submit" value="Submit">
+    <div class="test"></div>
+      </div> -->
+  
+      <!-- płeć -->
+      <div class="form_item">
+  
+      <h2>Płeć </h2>
    
-<body>
-    <header><h1>ZAŁOGA STATKU - akta personalne <h1></h1></header> 
-    <section id="statistic"></section>
-
-    <!--================================================================ Sekcja formularzy===================================== -->
-    <section id="section_form">
-       
-       <form style="margin-top:20px;" id=""></form> 
-    <!-- imie i nazwisko --> 
+  <input type="checkbox" id="sex_k" name="sex" value="kobieta" class="one" >
+  <label for="sex_k">Kobieta</label><br>
+  <input type="checkbox" id="sex_m" name="sex" value="mężczyzna"class="one" >
+  <label for="sex_m">Mężczyzna</label><br>
+  <!-- </form> -->
+      </div>
+  
+  
+        <!-- Stan cywilny -->
     <div class="form_item">
-      <h2> Imię i nazwisko </h2>
-<label for="fname">Imię lub nazwisko:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <input type="submit" value="Submit">
-  <div class="test"></div>
-    </div>
-
-    <!-- płeć -->
+      <!-- <form action=""> -->
+        <h2>Stan cywilny</h2>
+        <input type="checkbox" id="singiel" name="stan_cywilny" value="singiel" class="one" >
+        <label for="singiel">Singiel</label><br>
+        <input type="checkbox" id="W związku" name="stan_cywilny" value="w_zwiazku" class="one">
+        <label for="W związku">W związku</label><br>
+      </form>
+      
+      </div>
+  
+  
+      <!------Pochodzenie -->
+      <div class="form_item">
+     <form action="">
+          <h2>Pochodzenie</h2> 
+          <label for="pochodzenie">Pochodzenie:</label>
+          <select id="pochodzenie" name="stopien">
+            <option value="kapitan">Ludzie kapitana</option>
+            <option value="drzewiarze">Drzewiarze</option>
+            <option value="mutanci">Mutanci z Vessimir</option>
+            <option value="Ludzie Zaltarma">Ludzie Zaltarma</option>
+            <option value="Ludzie Beniamina">Ludzie Beniamina</option>
+            <option value="Ludzie Bykowa">Ludzie Bykowa</option>
+            <option value="Ludzie Gabriela">Ludzie Gabriela</option>
+            <option value="Ludzie z Talnina">Ludzie z Talina</option>
+            <option value="Ludzie zwerbowani na Księżycu">Zwerbowani na Księżycu</option>
+  
+          </select>
+          </form>
+  </div>
+  
+  
+  
+    <!-- Wachta/ zmiana --> 
     <div class="form_item">
-
-    <h2>Płeć </h2>
- 
-<input type="checkbox" id="sex_k" name="sex" value="kobieta" class="one" >
-<label for="sex_k">Kobieta</label><br>
-<input type="checkbox" id="sex_m" name="sex" value="mężczyzna"class="one" >
-<label for="sex_m">Mężczyzna</label><br>
-<!-- </form> -->
-    </div>
-
-
-      <!-- Stan cywilny -->
+    <form action="" id="zmiana">
+      <h2>Wachta/zmiana</h2>
+      
+      <input type="radio"  id="zpierwsza" name="zmiana" value="pierwsza">
+      <label for="zpierwsza">Pierwsza</label><br>
+      <input type="radio"  id="zdruga" name="zmiana" value="druga">
+      <label for="radio">Druga</label><br>
+      <input type="radio"   id="ztrzecia" name="zmiana" value="trzecia">
+      <label for="ztrzecia">Trzecia</label><br>
+      <input type="radio"  id="ndt" name="zmiana" value="nie dotyczy">
+      <label for="ndt">Nie dotyczy</label><br>
+      <input type="radio"  id="wszyscy" name="zmiana" value="wszyscy">
+      <label for="all">Wszyscy</label><br>
+  </form></div> -
+  
+    <!-- Języki -->
   <div class="form_item">
-    <!-- <form action=""> -->
-      <h2>Stan cywilny</h2>
-      <input type="checkbox" id="singiel" name="stan_cywilny" value="singiel" class="one" >
-      <label for="singiel">Singiel</label><br>
-      <input type="checkbox" id="W związku" name="stan_cywilny" value="w_zwiazku" class="one">
-      <label for="W związku">W związku</label><br>
-    </form>
-    
-    </div>
-
-
-    <!------Pochodzenie -->
+    <form action="" id="language_form">
+    <h2>Osoby mówiące językami:</h2>
+    <input type="checkbox" id="angielski" name="language" class="language" value="angielski">
+    <label for="angielski"> Angielski</label><br>
+    <input type="checkbox" id="niemiecki" name="language" class="language" value="niemiecki">
+    <label for="niemiecki"> Niemiecki</label><br>
+    <input type="checkbox" id="rosyjski" name="language" class="language" value="rosyjski">
+    <label for="rosyjski"> Rosyjski</label><br>
+    <input type="checkbox" id="czeski" name="language" class="language" value="czeski">
+    <label for="czeski"> Czeski</label><br>
+    <input type="checkbox" id="francuski" name="language" class="language"value="francuski">
+    <label for="francuski"> Francuski</label><br>
+    <input type="checkbox" id="aramejski" name="language" class="language"value="aramejski">
+    <label for="aramejski"> Aramejski</label><br>
+    <input type="button" value="Sortuj" id="getLanguageButton">
+  </form></div> 
+  
+    <!-- Stopień -->
     <div class="form_item">
-   <form action="">
-        <h2>Pochodzenie</h2> 
-        <label for="pochodzenie">Pochodzenie:</label>
-        <select id="pochodzenie" name="stopien">
-          <option value="kapitan">Ludzie kapitana</option>
-          <option value="drzewiarze">Drzewiarze</option>
-          <option value="mutanci">Mutanci z Vessimir</option>
-          <option value="Ludzie Zaltarma">Ludzie Zaltarma</option>
-          <option value="Ludzie Beniamina">Ludzie Beniamina</option>
-          <option value="Ludzie Bykowa">Ludzie Bykowa</option>
-          <option value="Ludzie Gabriela">Ludzie Gabriela</option>
-          <option value="Ludzie z Talnina">Ludzie z Talina</option>
-          <option value="Ludzie zwerbowani na Księżycu">Zwerbowani na Księżycu</option>
-
-        </select>
-        </form>
-</div>
-
-
-
-  <!-- Wachta/ zmiana --> 
-  <div class="form_item">
-  <form action="">
-    <h2>Wachta/zmiana</h2>
-    
-    <input type="checkbox" id="zpierwsza" name="zmiana" value="zpierwsza">
-    
-    <label for="zpierwsza">Pierwsza</label><br>
-    
-    <input type="checkbox" id="zdruga" name="zmiana" value="zdruga">
-    <label for="zdruga">Druga</label><br>
-    <input type="checkbox" id="ztrzecia" name="zmiana" value="ztrzecia">
-    <label for="ztrzecia">Trzecia</label><br>
-    <input type="checkbox" id="ndt" name="zmiana" value="ndt">
-    <label for="ndt">Nie dotyczy</label><br>
-    <input type="submit" value="Submit"> -
-</form></div> -
-
-  <!-- Języki -->
-<div class="form_item">
-  <form action="">
-  <h2>Osoby mówiące językami:</h2>
-  <input type="checkbox" id="angielski" name="angielski" value="angielski">
-  <label for="angielski"> Angielski</label><br>
-  <input type="checkbox" id="niemiecki" name="niemiecki" value="niemiecki">
-  <label for="niemiecki"> Niemiecki</label><br>
-  <input type="checkbox" id="rosyjski" name="rosyjski" value="rosyjski">
-  <label for="rosyjski"> Rosyjski</label><br>
-  <input type="checkbox" id="inne" name="inne" value="inne">
-  <label for="inne"> Inne</label><br>
-  <input type="submit" value="Submit">
-</form></div> 
-
-  <!-- Stopień -->
-  <div class="form_item">
-  <h2>Stopień:</h2>
-  <form action="">
-  <label for="stopien">Stopień na statku:</label>
-<select id="stopien" name="stopien">
-  <option value="kapitan">Kapitan</option>
-  <option value="poficer">Pierwszy oficer</option>
-  <option value="doficer">Drugi oficer</option>
-  <option value="toficer">Trzeci oficer</option>
-  <option value="poficer">Oficer pokładowy</option>
-  <option value="dowodca">Dowódca działiu</option>
-  <option value="zastdowodcy">Zastępca dowódcy działu</option>
-  <option value="smarynarz">Starszy marynarz</option>
-  <option value="marynarz">Marynarz</option>
-  <option value="asystent">Asystent</option>
-  <option value="kadet">Kadet</option>
-</select>
-<input type="submit" value="Submit">
-</form></div>
-
-
-<!-- Mutacja -->
-
-<div class="form_item">
-<h2>Mutacje:</h2>
-<form action="">
-<label for="mutacja">Mutacja:</label>
-<select id="mutacja" name="mutacja">
-    <option value="futro">Futro</option>
-    <option value="wełna">Wełna</option>
-    <option value="przysadzista">Przysadzista budowa ciała</option>
-    <option value="zwierzęce">Zwierzece rysy twarzy</option>
-    <option value="rogi">Rogi</option>
-    <option value="czulk">Czułki</option>
-    <option value="smukla">Smukła budowa ciała</option>
-    <option value="niebieska">Niebieska skóra</option>
-    <option value="uzębienie">Zmiany w uzębieniu</option>
-    <option value="inne">Inne</option>
+    <h2>Stopień:</h2>
+    <form action="">
+    <label for="stopien">Stopień na statku:</label>
+  <select id="stopien" name="stopien">
+    <option value="kapitan">Kapitan</option>
+    <option value="poficer">Pierwszy oficer</option>
+    <option value="doficer">Drugi oficer</option>
+    <option value="toficer">Trzeci oficer</option>
+    <option value="poficer">Oficer pokładowy</option>
+    <option value="dowodca">Dowódca działiu</option>
+    <option value="zastdowodcy">Zastępca dowódcy działu</option>
+    <option value="smarynarz">Starszy marynarz</option>
+    <option value="marynarz">Marynarz</option>
+    <option value="asystent">Asystent</option>
+    <option value="kadet">Kadet</option>
   </select>
   <input type="submit" value="Submit">
-  </form>
-</div>
-    
-    </section>
-    
-    <!--================================================================ Sekcja załogi===================================== -->
-   <section id="crew"></section>
+  </form></div>
+  
+  
+  <!-- Mutacja -->
+  
+  <!-- <div class="form_item">
+  <h2>Mutacje:</h2>
+  <form action="">
+  <label for="mutacja">Mutacja:</label>
+  <select id="mutacja" name="mutacja">
+      <option value="futro">Futro</option>
+      <option value="wełna">Wełna</option>
+      <option value="przysadzista">Przysadzista budowa ciała</option>
+      <option value="zwierzęce">Zwierzece rysy twarzy</option>
+      <option value="rogi">Rogi</option>
+      <option value="czulk">Czułki</option>
+      <option value="smukla">Smukła budowa ciała</option>
+      <option value="niebieska">Niebieska skóra</option>
+      <option value="uzębienie">Zmiany w uzębieniu</option>
+      <option value="inne">Inne</option>
+    </select>
+    <input type="submit" value="Submit">
+    </form>
+  </div> -->
+      
+      </section>
+      
+      <!--================================================================ Sekcja załogi===================================== -->
+     <section id="crew"></section>
+  
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--     <script src="https://raw.githubusercontent.com/AnJaWr/crew/main/zaloga.js"></script>  -->
+  <script src="zaloga.js"></script>
+      <script src="search.js"></script>
 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="zaloga.js"></script> 
-    <script src="search.js"></script> 
-</body>
-</html>
+  </body>
+  </html>
