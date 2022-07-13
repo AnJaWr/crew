@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-   
+   var zmienna
+
    function populate(obj) {
    
    
@@ -37,6 +38,7 @@ $(document).ready(function(){
        const mPlec = document.createElement('p');
       const mStanCyw = document.createElement('p');
        const mDzieci= document.createElement('p');
+       const mPochodzenie = document.createElement('p');
        const mJezyki = document.createElement('p');
        const mStopień = document.createElement('p');
        const mFunkcja = document.createElement('p');
@@ -50,17 +52,20 @@ $(document).ready(function(){
    
        
       var stringLanguages = member.język.map((val) => {return val.język;}).join(', ');
-      
-    
+       var funkcja = member.funkcja
 
+       funkcja.length > 0 ? funkcja = member.funkcja.join(', ') : funkcja = member.funkcja
+
+   
        mName.textContent = `Imię i nazwisko: ${member.imię} ${member.nazwisko}`;
        mWiek.textContent = `Wiek: ${member.wiek}`;
        mPlec.textContent = `Płeć: ${member.sex}`;
        mStanCyw.textContent = `Stan cywilny: ${member.stan_cywilny}`;
        mDzieci.textContent = `Dzieci:  ${member.dzieci}`;
+       mPochodzenie.textContent = `Pochodzenie:  ${member.pochodzenie}`;
        mJezyki.textContent = `Języki: ` + stringLanguages;
        mStopień.textContent = `Stopień: ${member.stopień}`;
-       mFunkcja.textContent = `Funkcja: ${member.funkcja}`;
+       mFunkcja.textContent = `Funkcja: ${funkcja}`;
        mStanowisko.textContent = `Stanowisko: ${member.stanowisko}`;
        mWachta.textContent = `Wachta/zmiana: ${member.zmiana}`;
        mLike.textContent = `Lubi: ${member.lubi}`;
@@ -95,6 +100,7 @@ $(document).ready(function(){
        member_container.appendChild(mPlec);
        member_container.appendChild(mStanCyw);
        member_container.appendChild(mDzieci);
+       member_container.appendChild(mPochodzenie);
        member_container.appendChild(mJezyki);
        member_container.appendChild(mStopień);
        member_container.appendChild(mFunkcja);
@@ -137,17 +143,71 @@ $(document).ready(function(){
      $("#statistic").children('div').addClass("akta");
    
    };
+//...............................pochodzenie ............................
 
+ 
+  // var pochodzenie = document.getElementById('pochodzenie') ;  
+  // console.log(pochodzenie)
 
-  var checkbox = document.querySelectorAll('input[type="checkbox"][class="one"]') ;  
+ 
+let wybrano_pochodzenie = ""
+
+$('#pochodzenie').on('change',(event) => {
+   wybrano_pochodzenie = event.target.value;
+console.log(wybrano_pochodzenie);
+var wybrane_osoby
+
+if (wybrano_pochodzenie === "wszyscy"){wybrane_osoby = members}
+else {wybrane_osoby = members.filter(member => member.pochodzenie === wybrano_pochodzenie) 
+console.log(wybrane_osoby)}
+
+$("#crew>div").remove();
+
+findMembers(wybrane_osoby)
+
+});
+//.............................imię------------------------
+
+function SayMyName(obj) {
+const wpisz_imię = $('input[type="text"]')
+
+  var nazwa = $('#name').val()
+ nazwa = nazwa.substr(0, 1).toUpperCase() + nazwa.substr(1).toLowerCase();
+console.log(nazwa)
   
+  imiennicy = [];
+  imiennicy = members.filter(member => member.imię === nazwa || member.nazwisko === nazwa) 
+
+
+  if(imiennicy.length >0){
+  $("#crew>div").remove();
+   findMembers(imiennicy)}
+
+   else{ 
+     $("#crew>div").remove();
+   const mainContainer = document.getElementById("crew");
+   const nieMa = document.createElement('div')
+   nieMa.innerHTML = `<p>Nie ma takiego załoganta</p>`;
+  nieMa.setAttribute("class", "member");
+   mainContainer.appendChild(nieMa);
+   }
+
+}
+
+var name_button = document.getElementById("namebutton");
+console.log(name_button)
+
+name_button.addEventListener("click", SayMyName)
+
+//...........................płeć ............................
+
   var checkbox_checked=["","","",""];
   var wybrany_stan = "";
   var wybrana_płeć = "" ;
   var wybrani = members;
-   var wybrani =[];
+  //  var wybrani =[]; zmieniłam to teraz
    
-   
+   var checkbox = document.querySelectorAll('input[type="checkbox"][class="one"]') ;  
        
    function checkboxHandle(obj){
    wybrani = members
@@ -156,10 +216,6 @@ $(document).ready(function(){
      if ((checkbox[0].checked && checkbox[1].checked)||(!checkbox[0].checked && !checkbox[1].checked)){wybrani = members}
      if (checkbox[2].checked&&!checkbox[3].checked) {wybrani = wybrani.filter(member => member.stan_cywilny === "singiel")}
      if (!checkbox[2].checked&& checkbox[3].checked) {wybrani = wybrani.filter(member => member.stan_cywilny === "związek")}
-
-
-     //language
-
        
      $("#crew>div").remove();
    
@@ -170,7 +226,41 @@ $(document).ready(function(){
    Array.prototype.forEach.call(checkbox, function(checkbox){
    checkbox.addEventListener('change', checkboxHandle)
    })
+
+
+   //.............................................zmiana..................................
+
+  //  var wybrani = members;
+    var pracownicy_zmiany =[];
+    
+    var zmiana_radio = document.querySelectorAll('input[type="radio"][name="zmiana"]') ; 
+ 
+        
+    function zmianaHandle(obj){   
+       console.log(zmiana_radio)
    
+      if (zmiana_radio[0].checked) {pracownicy_zmiany = members.filter(member => member.zmiana === "1") 
+      console.log(pracownicy_zmiany)}
+      if (zmiana_radio[1].checked) {pracownicy_zmiany = members.filter(member => member.zmiana === "2")
+      console.log(pracownicy_zmiany)}
+      if (zmiana_radio[2].checked){pracownicy_zmiany = members.filter(member => member.zmiana === "3")
+      console.log(pracownicy_zmiany)}
+      if (zmiana_radio[3].checked) {pracownicy_zmiany = members.filter(member => member.zmiana === "")
+      console.log(pracownicy_zmiany)}
+      if ( zmiana_radio[4].checked) {pracownicy_zmiany = members}
+        
+      $("#crew>div").remove();
+    
+      findMembers(pracownicy_zmiany)
+       }
+    
+     
+    Array.prototype.forEach.call(zmiana_radio, function(zmiana_radio){
+      zmiana_radio.addEventListener('change', zmianaHandle)
+    })
+
+   //............................................języki ...................................
+
    function selectLanguage(form) {
     let selectLanguageArr = [];
     let inputFields =  document.querySelectorAll('input[type="checkbox"][name="language"]') ;
@@ -180,20 +270,17 @@ $(document).ready(function(){
     for(let i=0; i<inputFieldsNumber; i++) {
       if(
         inputFields[i].type == 'checkbox' &&
-        inputFields[i].checked == true
-      ) selectLanguageArr.push(inputFields[i].value);
+        inputFields[i].checked == true) selectLanguageArr.push(inputFields[i].value);
+      ;
     }
     return selectLanguageArr;
   }
 
-  var form = document.getElementById("language_form")
+var form = document.getElementById("language_form")
   selectLanguage(form);
-
-  var getLanguageButton = document.getElementById('getLanguageButton');
-  console.log(getLanguageButton)
-
+var getLanguageButton = document.getElementById('getLanguageButton');
  
-  getLanguageButton.addEventListener("click", function(){
+getLanguageButton.addEventListener("click", function(){
     let selectedCheckBoxes = selectLanguage(this.form);
     
     let filtered = members.filter((member) => {
@@ -206,4 +293,23 @@ $(document).ready(function(){
   $("#crew>div").remove();
    findMembers(filtered); 
   });
+//...............................stopień............................
+
+let wybrano_stopien = ""
+
+$('#stopien').on('change',(event) => {
+ wybrano_stopien = event.target.value  ;
+let wybrane_stopnie; 
+
+if (wybrano_stopien === "wszyscy"){wybrane_stopnie= members}
+else {wybrane_stopnie = members.filter(member => member.stopień === wybrano_stopien) 
+console.log(wybrano_stopien)}
+
+$("#crew>div").remove();
+
+findMembers(wybrane_stopnie)
+
+
+});
+
    });

@@ -19,13 +19,13 @@
          
          <form style="margin-top:20px;" id=""></form> 
       <!-- imie i nazwisko --> 
-  <!--     <div class="form_item">
+      <div class="form_item">
         <h2> Imię i nazwisko </h2>
-  <label for="fname">Imię lub nazwisko:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <input type="submit" value="Submit">
+  <label for="fname">Wpisz imię lub nazwisko:</label><br>
+    <input type="text" id="name" name="name" value=""><br>
+    <input type="button" value="Szukaj" id="namebutton">
     <div class="test"></div>
-      </div> -->
+      </div>
   
       <!-- płeć -->
       <div class="form_item">
@@ -58,16 +58,18 @@
      <form action="">
           <h2>Pochodzenie</h2> 
           <label for="pochodzenie">Pochodzenie:</label>
-          <select id="pochodzenie" name="stopien">
-            <option value="kapitan">Ludzie kapitana</option>
-            <option value="drzewiarze">Drzewiarze</option>
-            <option value="mutanci">Mutanci z Vessimir</option>
+          <select id="pochodzenie" name="pochodzenie">
+            <option value="wszyscy">Wszyscy</option>
+            <option value="Ludzie Hugona">Ludzie kapitana</option>
+            <option value="Drzewiarze">Drzewiarze</option>
+            <option value="Mutanty z Vismeistrim">Mutanci z Vessimir</option>
             <option value="Ludzie Zaltarma">Ludzie Zaltarma</option>
-            <option value="Ludzie Beniamina">Ludzie Beniamina</option>
+            <option value="Niemcy">Ludzie Beniamina</option>
             <option value="Ludzie Bykowa">Ludzie Bykowa</option>
             <option value="Ludzie Gabriela">Ludzie Gabriela</option>
-            <option value="Ludzie z Talnina">Ludzie z Talina</option>
-            <option value="Ludzie zwerbowani na Księżycu">Zwerbowani na Księżycu</option>
+            <option value="Ludzie z Talina">Ludzie z Talina</option>
+            <option value="Ludzie z wioski">Ludzie z wioski</option>
+            <option value="Zwerbowani na Księżycu">Zwerbowani na Księżycu</option>
   
           </select>
           </form>
@@ -80,13 +82,13 @@
     <form action="" id="zmiana">
       <h2>Wachta/zmiana</h2>
       
-      <input type="radio"  id="zpierwsza" name="zmiana" value="pierwsza">
+      <input type="radio"  id="pierwsza" name="zmiana" value="1">
       <label for="zpierwsza">Pierwsza</label><br>
-      <input type="radio"  id="zdruga" name="zmiana" value="druga">
+      <input type="radio"  id="druga" name="zmiana" value="2">
       <label for="radio">Druga</label><br>
-      <input type="radio"   id="ztrzecia" name="zmiana" value="trzecia">
+      <input type="radio"   id="trzecia" name="zmiana" value="3">
       <label for="ztrzecia">Trzecia</label><br>
-      <input type="radio"  id="ndt" name="zmiana" value="nie dotyczy">
+      <input type="radio"  id="ndt" name="zmiana" value="">
       <label for="ndt">Nie dotyczy</label><br>
       <input type="radio"  id="wszyscy" name="zmiana" value="wszyscy">
       <label for="all">Wszyscy</label><br>
@@ -117,19 +119,21 @@
     <form action="">
     <label for="stopien">Stopień na statku:</label>
   <select id="stopien" name="stopien">
+    <option value="wszyscy">Wszyscy</option>
     <option value="kapitan">Kapitan</option>
-    <option value="poficer">Pierwszy oficer</option>
-    <option value="doficer">Drugi oficer</option>
-    <option value="toficer">Trzeci oficer</option>
-    <option value="poficer">Oficer pokładowy</option>
-    <option value="dowodca">Dowódca działiu</option>
-    <option value="zastdowodcy">Zastępca dowódcy działu</option>
-    <option value="smarynarz">Starszy marynarz</option>
+    <option value="Pierwszy oficer">Pierwszy oficer</option>
+    <option value="Drugi oficer">Drugi oficer</option>
+    <option value="Trzeci oficer">Trzeci oficer</option>
+    <option value="oficer pokładowy">Oficer pokładowy</option>
+    <!-- <option value="dowódca pokładu">Dowódca pokładu</option> -->
+    <option value="dowódca działu">Dowódca działu</option>
+    <option value="zastępca dowódcy">Zastępca dowódcy działu</option>
+    <option value="starszy marynarz">Starszy marynarz</option>
     <option value="marynarz">Marynarz</option>
     <option value="asystent">Asystent</option>
     <option value="kadet">Kadet</option>
   </select>
-  <input type="submit" value="Submit">
+  <input type="button" value="Reset">
   </form></div>
   
   
