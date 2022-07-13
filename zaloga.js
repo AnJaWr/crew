@@ -2538,7 +2538,7 @@
    {
    "imię": "Vladislav ",
    "nazwisko": "Bykow",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+   "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "47" ,
 "język":[], 
@@ -2557,7 +2557,7 @@
    {
    "imię": "Trifon",
    "nazwisko": "Andrejew",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+   "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "40" ,
 "język":[], 
@@ -2576,7 +2576,7 @@
 {
    "imię": "Rashid",
    "nazwisko": "Kharamow",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "39" ,
 "język":[], 
@@ -2595,7 +2595,7 @@
 {
    "imię": "Jacob",
    "nazwisko": "Kolesow",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "48" ,
 "język":[], 
@@ -2615,7 +2615,7 @@
 {
    "imię": "Natan",
    "nazwisko": "Pokrowski",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "57" ,
 "język":[], 
@@ -2635,7 +2635,7 @@
  {
    "imię": "Mścisław",
    "nazwisko": "Golubew",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "25" ,
 "język":[], 
@@ -2654,7 +2654,7 @@
  {
    "imię": "Wit",
    "nazwisko": "Kwiatkowski",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "51" ,
 "język":[], 
@@ -2673,7 +2673,7 @@
 {
    "imię": "Wolfgang ",
    "nazwisko": "Kastner",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "37" ,
 "język":[], 
@@ -2692,7 +2692,7 @@
 {
    "imię": "Gustave",
    "nazwisko": "Vadnais",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "29" ,
 "język":[], 
@@ -2712,7 +2712,7 @@
 {
    "imię": "Luc",
    "nazwisko": "Tessier",
-   "pochodzenie":"Ludzie Vladislava Bykowa",
+    "pochodzenie":"Ludzie Bykowa",
 "sex" : "mężczyzna",
 "wiek": "52" ,
 "język":[], 
@@ -2733,7 +2733,7 @@
    {
    "imię": "Rachel",
    "nazwisko": " Zotova",
-  "pochodzenie":"Ludzie Vladislava Bykowa",
+   "pochodzenie":"Ludzie Bykowa",
 "sex" : "kobieta",
 "wiek": "22" ,
 "język":[], 
@@ -2752,7 +2752,7 @@
 {
    "imię": "Lada",
    "nazwisko": "Yevsejewa",
- "pochodzenie":"Ludzie Vladislava Bykowa",
+  "pochodzenie":"Ludzie Bykowa",
 "sex" : "kobieta",
 "wiek": "36" ,
 "język":[], 
@@ -2771,7 +2771,7 @@
   {
    "imię": "Klaudia",
    "nazwisko": "Rodshield",
- "pochodzenie":"Ludzie Vladislava Bykowa",
+  "pochodzenie":"Ludzie Bykowa",
 "sex" : "kobieta",
 "wiek": "60" ,
 "język":[], 
@@ -2790,7 +2790,7 @@
   {
    "imię": "Laura",
    "nazwisko": "Kruger",
- "pochodzenie":"Ludzie Vladislava Bykowa",
+  "pochodzenie":"Ludzie Bykowa",
 "sex" : "kobieta",
 "wiek": "34" ,
 "język":[], 
@@ -2811,7 +2811,7 @@
    {
    "imię": "Elise",
    "nazwisko": "Hall",
- "pochodzenie":"Ludzie Vladislava Bykowa",
+  "pochodzenie":"Ludzie Bykowa",
 "sex" : "kobieta",
 "wiek": "23" ,
 "język":[], 
