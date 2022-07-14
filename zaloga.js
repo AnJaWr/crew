@@ -4424,6 +4424,26 @@
 "portret":"jpg/female.jpg",
 "status":"aktywny"},
 
+{
+   "imię": "Ann",
+      "nazwisko": "Fonseca",
+      "pochodzenie":"Zwerbowani na Księżycu",
+   "sex" : "" ,
+   "język":[],
+   "stanowisko": ["mostek", "CPU"],
+   "stopień": "starszy marynarz",
+   "funkcja": ["technik mostka", "CPU"], 
+    "zmiana": "2",
+   "stan_cywilny": "związek",
+   "dzieci": "brak",
+   "umiejętności": "",
+   "wydarzenia": "",
+   "lubi":"",
+   "nielubi": "",
+   "mutacja":[""],
+   "opis":"Egon zaprasza ją na randki w niebezpieczne miejsca", 
+   "portret":"jpg/female.jpg",
+   "status":"aktywny"},
 
 {
 "imię": "Robert",
